@@ -1,0 +1,99 @@
+.vl {
+    border-left: 4px solid rgb(0, 0, 0);
+    height: 586px;
+}
+
+.container {
+    height: max-content;
+}
+
+.minutes-container,
+.hours-container,
+.seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hours {
+    background: #000;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    top: 0%;
+    transform-origin: 0%;
+    width: 0.3%;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.hours-container {
+    animation: rotate 30s infinite linear;
+}
+
+.clock.simple:after {
+    background: #000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+}
+
+.clock {
+    height: 50%;
+    width: 40.5%;
+    background-color: #bbb;
+    border-radius: 50%;
+    /* display: inline-block; */
+    position: relative;
+    top: 25%;
+    left: 30%;
+}
+
+form {
+    padding-top: 10%;
+}
+
+label {
+    color: blue;
+}
+
+
+/* #moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 red;
+  }
+  #cone {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 100px solid red;
+    border-radius: 50%;
+  }
+#pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid red;
+    border-left: 60px solid red;
+    border-bottom: 60px solid red;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+} */

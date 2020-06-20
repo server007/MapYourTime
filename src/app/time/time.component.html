@@ -1,0 +1,51 @@
+<div class="row">
+    <div class=" col-sm-7 col-md-7 col-lg-7 ">
+        <article class="clock">
+            <div class="hours-container">
+                <div class="hours"></div>
+            </div>
+
+        </article>
+    </div>
+    <div class="">
+
+    </div>
+    <div class="vl "></div>
+    <div class="col-sm-4 col-md-4 col-lg-4 ">
+        <form>
+            <div class="row list" *ngFor="let item of list; let i = index">
+                <div class="md-form md-outline form-group col-sm-4">
+                    <label for="default-picker">{{item.time}}</label>
+                </div>
+                <div class="md-form md-outline form-group col-sm-4">
+                    <label for="default-picker">{{item.value}}</label>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="md-form md-outline form-group col-sm-4">
+                    <label for="default-picker"><b>Pick Time</b></label>
+                </div>
+                <div class="md-form md-outline form-group col-sm-4">
+                    <label for="task-name"><b>Task Name</b></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="md-form md-outline form-group col-sm-4">
+                    <input type="time" id="default-picker" class="form-control" name="time2" [(ngModel)]="time2" placeholder="Select time">
+
+                </div>
+                <div class="md-form md-outline form-group col-sm-8">
+                    <input type="text" class="form-control" aria-label="Sizing example input" name="val" [(ngModel)]="val" placeholder="Input task name" aria-describedby="inputGroup-sizing-sm">
+                </div>
+            </div>
+            <div class="col col-sm-5">
+                <button type="button" (click)="addTask()" class="btn btn-success">add task</button>
+            </div>
+        </form>
+        <br>
+        <div class="col col-lg-5" style="position: absolute; padding-left: 45%;">
+            <button type="button" class="btn btn-secondary">Submit</button>
+        </div>
+    </div>
+</div>
